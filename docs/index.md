@@ -6,7 +6,11 @@ Family dinners, favourites and the notes that make them work next time.
 
 Use **Search** to find a recipe by name or ingredient, or [browse by tag](tags.md).
 
-The collection is ready for its first recipe. Each recipe lives in its own Markdown file, so it is easy to keep, edit and share.
+Each recipe lives in its own Markdown file, so it is easy to keep, edit and share.
+
+### Try a recipe
+
+[Easy tomato pasta](recipes/easy-tomato-pasta.md) — serves 5, ready in about 30 minutes. A sample recipe for testing the site.
 
 ## Add a recipe
 
