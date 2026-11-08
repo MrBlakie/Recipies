@@ -5,7 +5,7 @@ hide:
 
 <p class="kitchen-kicker">THE RECIPE COLLECTION</p>
 
-# Blake's Recipes
+# DishVault
 
 Family dinners, favourites and cooking notes, all in one place.
 
