@@ -65,3 +65,37 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
   body, .md-typeset, .md-typeset h1, .md-typeset h2, .md-typeset h3 { background: white !important; color: black !important; }
   .md-typeset .recipe-card, .md-typeset table:not([class]), .md-typeset table:not([class]) th { background: white; color: black; border-color: #aaa; }
 }
+
+/* Keep links, navigation states and letter shortcuts in the kitchen palette. */
+[data-md-color-scheme="slate"] .md-typeset {
+  --md-typeset-a-color: #edb867;
+}
+.md-typeset a:not(.md-button):not(.md-tag),
+.md-typeset a:not(.md-button):not(.md-tag):visited { color: #edb867; }
+.md-typeset a:not(.md-button):not(.md-tag):hover,
+.md-typeset a:not(.md-button):not(.md-tag):focus { color: #f6cd91; }
+.md-nav__link:hover, .md-nav__link:focus,
+.md-nav__link--active, .md-nav__item--active > .md-nav__link { color: #edb867; }
+.md-nav--primary > .md-nav__title { display: none; }
+.md-typeset .recipe-alphabet {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem;
+  margin: 1.5rem 0 2rem;
+}
+.md-typeset .recipe-alphabet a,
+.md-typeset .recipe-alphabet span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.65rem;
+  height: 1.65rem;
+  border: 1px solid #4d4538;
+  border-radius: 5px;
+  font-size: .7rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+.md-typeset .recipe-alphabet a:hover,
+.md-typeset .recipe-alphabet a:focus { background: #edb867; color: #191b1d; }
+.md-typeset .recipe-alphabet span { border-color: #303335; color: #777a77; }
