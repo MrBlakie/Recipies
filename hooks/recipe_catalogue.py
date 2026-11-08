@@ -80,7 +80,7 @@ def on_files(files, config):
     for recipe in recipes:
         for tag in recipe["tags"]:
             tagged[tag].append(recipe)
-    tag_nav = []
+    tag_nav = [{"All tags": "tags.md"}]
     for tag in sorted(tagged, key=sort_key):
         path = tag_path(tag)
         content = "---\ntitle: " + json.dumps(tag) + "\n---\n\n# Recipes by tag\n\n<!-- material/tags " + json.dumps({"include": [tag]}) + " -->\n"
