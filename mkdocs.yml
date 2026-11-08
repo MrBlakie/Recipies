@@ -14,7 +14,6 @@ theme:
   features:
     - navigation.top
     - search.suggest
-    - search.highlight
 plugins:
   - search
   - tags
