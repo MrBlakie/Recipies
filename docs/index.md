@@ -1,27 +1,30 @@
+---
+hide:
+  - toc
+---
+
+<p class="kitchen-kicker">THE RECIPE COLLECTION</p>
+
 # Blake's Recipes
 
-Family dinners, favourites and the notes that make them work next time.
+Family dinners, favourites and cooking notes, all in one place.
 
-## Find something to cook
+[Browse by tag](tags.md){ .md-button }
 
-Use **Search** to find a recipe by name or ingredient, or [browse by tag](tags.md).
+## Something to cook
 
-Each recipe lives in its own Markdown file, so it is easy to keep, edit and share.
+<div class="recipe-card" markdown>
 
-### Try a recipe
+### Easy tomato pasta
 
-[Easy tomato pasta](recipes/easy-tomato-pasta.md) — serves 5, ready in about 30 minutes. A sample recipe for testing the site.
+A simple tomato and garlic sauce, a pot of pasta, and dinner is sorted.
 
-## Add a recipe
+**SERVES 5** · **30 MINUTES**
 
-1. Open the [recipe template](adding-recipes.md).
-2. Copy it into a new file in the repository's docs/recipes/ folder.
-3. Fill in the ingredients, method and tags, then commit the file.
+[View recipe →](recipes/easy-tomato-pasta.md){ .md-button .md-button--primary }
 
-The site will rebuild automatically. New recipes appear in the navigation and search, and under their tags.
+</div>
 
-[Open recipe template](adding-recipes.md){ .md-button .md-button--primary }
+## Find a favourite
 
-## Cooking notes
-
-Use metric measurements and Celsius. Keep any changes, substitutions and family preferences with the recipe so they are there next time you cook it.
+Search by recipe name or ingredient, or browse the tags to find something that suits.
