@@ -1,23 +1,25 @@
 site_name: Blake's Recipes
-site_description: A collection of family recipes, favourites and cooking notes.
+site_description: Family dinners, favourites and cooking notes.
 site_url: https://mrblakie.github.io/Recipies/
-repo_url: https://github.com/MrBlakie/Recipies
-edit_uri: edit/main/docs/
+exclude_docs: |
+  adding-recipes.md
 theme:
   name: material
   language: en
   font: false
   palette:
-    primary: green
+    scheme: slate
+    primary: black
     accent: amber
   features:
     - navigation.top
     - search.suggest
     - search.highlight
-    - content.action.edit
 plugins:
   - search
   - tags
+extra_css:
+  - stylesheets/dark-kitchen.css
 markdown_extensions:
   - admonition
   - attr_list
