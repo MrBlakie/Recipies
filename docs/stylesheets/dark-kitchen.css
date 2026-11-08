@@ -99,3 +99,13 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
 .md-typeset .recipe-alphabet a:hover,
 .md-typeset .recipe-alphabet a:focus { background: #edb867; color: #191b1d; }
 .md-typeset .recipe-alphabet span { border-color: #303335; color: #777a77; }
+
+/* Material applies additional active-link rules inside the mobile drawer. */
+[data-md-color-scheme="slate"] .md-nav .md-nav__link--active,
+[data-md-color-scheme="slate"] .md-nav .md-nav__link:hover,
+[data-md-color-scheme="slate"] .md-nav .md-nav__link:focus,
+[data-md-color-scheme="slate"] .md-nav__item--active > .md-nav__link,
+[data-md-color-scheme="slate"] .md-nav__item--active > .md-nav__link .md-nav__link,
+[data-md-color-scheme="slate"] .md-nav__item--active > .md-nav__link .md-nav__icon {
+  color: #edb867 !important;
+}
