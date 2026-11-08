@@ -58,6 +58,14 @@ def catalogue(recipes, page_path, title):
 
 
 def on_files(files, config):
+    # Give changed styles a new URL so browsers never keep an old colour palette.
+    stylesheet = files.get_file_from_path("stylesheets/dark-kitchen.css")
+    if stylesheet is not None:
+        css = stylesheet.content_string
+        digest = hashlib.sha256(css.encode()).hexdigest()[:12]
+        css_path = f"stylesheets/dark-kitchen-{digest}.css"
+        files.append(File.generated(config, css_path, content=css))
+        config["extra_css"] = [css_path]
     recipes = []
     for file in files.documentation_pages():
         if not file.src_uri.startswith("recipes/") or posixpath.basename(file.src_uri) == "index.md":
