@@ -1,6 +1,6 @@
 """Build the recipe catalogue and tag navigation from published recipe files."""
 import hashlib
-import html
+import json
 import posixpath
 import re
 import unicodedata
@@ -80,10 +80,11 @@ def on_files(files, config):
     for recipe in recipes:
         for tag in recipe["tags"]:
             tagged[tag].append(recipe)
-    tag_nav = [{"All tags": "tags.md"}]
+    tag_nav = []
     for tag in sorted(tagged, key=sort_key):
         path = tag_path(tag)
-        files.append(File.generated(config, path, content=catalogue(tagged[tag], path, html.escape(tag))))
+        content = "---\ntitle: " + json.dumps(tag) + "\n---\n\n# Recipes by tag\n\n<!-- material/tags " + json.dumps({"include": [tag]}) + " -->\n"
+        files.append(File.generated(config, path, content=content))
         tag_nav.append({tag: path})
     config["nav"] = [{"Home": "index.md"}, {"All recipes": "all-recipes.md"}, {"Tags": tag_nav}]
     return files
