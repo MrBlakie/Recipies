@@ -3,6 +3,7 @@ site_description: Family dinners, favourites and cooking notes.
 site_url: https://mrblakie.github.io/Recipies/
 exclude_docs: |
   adding-recipes.md
+  tags.md
 theme:
   name: material
   language: en
