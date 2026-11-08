@@ -65,7 +65,7 @@ def on_files(files, config):
         if not file.inclusion.is_included():
             continue
         body, metadata = get_data(file.content_string)
-        heading = re.search(r"^#\\s+(.+?)\\s*#*\\s*$", body, re.MULTILINE)
+        heading = re.search(r"^#\s+(.+?)\s*#*\s*$", body, re.MULTILINE)
         title = str(metadata.get("title") or (heading.group(1) if heading else posixpath.basename(file.src_uri).rsplit(".", 1)[0].replace("-", " "))).strip()
         tags = metadata.get("tags") or []
         if isinstance(tags, str):
